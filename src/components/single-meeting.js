@@ -1,14 +1,19 @@
 import React from "react";
 
 const SingleMeeting = (props) => {
-    function createMarkup(){
+    
+    function createCityTimeMarkup(){
+        return {__html: `${props.city} / ${props.time}`}
+    }
+
+    function createAddressMarkup(){
         return {__html: props.addressName};
     }
 
     return (
         <>
-            <p className="my-4"><strong>{props.city} / {props.time}</strong><br />
-            <a rel="noopener noreferrer" target="_blank" href={props.addressLoc}><span className="meet-address"><span dangerouslySetInnerHTML={createMarkup()}></span>
+            <p className="my-4"><strong dangerouslySetInnerHTML={createCityTimeMarkup()}></strong><br />
+            <a rel="noopener noreferrer" target="_blank" href={props.addressLoc}><span className="meet-address" dangerouslySetInnerHTML={createAddressMarkup()}>
             </span></a></p>
         </>
     )
