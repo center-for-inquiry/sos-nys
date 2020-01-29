@@ -8,26 +8,22 @@ export const useFridayMeetings = () => {
             wpgraphql {
             posts(where: {categoryName: "Friday"}) {
                 edges {
-                node {
-                    title
-                    meetings {
-                    endTime
-                    fieldGroupName
-                    location
-                    mapLink
-                    startTime
-                    zipCode
+                    node {
+                      title
+                      meetings {
+                        endTime
+                        fieldGroupName
+                        location
+                        mapLink
+                        startTime
+                        zipCode
+                      }
+                      postId
                     }
-                    categories {
-                    nodes {
-                        name
-                    }
-                    }
+                  }
                 }
-                }
+              }
             }
-            }
-        }
     `);
 
     return meetingData.wpgraphql.posts;

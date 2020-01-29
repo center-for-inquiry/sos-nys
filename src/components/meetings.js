@@ -24,7 +24,7 @@ const Meetings = () => {
 
                     return(
                         <SingleMeeting
-                        key={nd.meetings.zipCode} 
+                        key={nd.postId} 
                         city={nd.title} 
                         time={`${nd.meetings.startTime} - ${nd.meetings.endTime}`} 
                         addressName={nd.meetings.location} 
