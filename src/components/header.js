@@ -1,42 +1,14 @@
 import { Link } from "gatsby"
-import PropTypes from "prop-types"
-import React from "react"
+import React from "react";
+import Logo from "../images/sos-phoenix.png";
+import 'bootstrap/dist/css/bootstrap.css';
 
-const Header = ({ siteTitle }) => (
-  <header
-    style={{
-      background: `rebeccapurple`,
-      marginBottom: `1.45rem`,
-    }}
-  >
-    <div
-      style={{
-        margin: `0 auto`,
-        maxWidth: 960,
-        padding: `1.45rem 1.0875rem`,
-      }}
-    >
-      <h1 style={{ margin: 0 }}>
-        <Link
-          to="/"
-          style={{
-            color: `white`,
-            textDecoration: `none`,
-          }}
-        >
-          {siteTitle}
-        </Link>
-      </h1>
-    </div>
-  </header>
+const Header = () => (
+  <nav className="navbar d-flex flex-column text-center">
+    <Link to="/"><img id="sos-logo" alt="SOS-NYS Logo" src={Logo}/></Link>
+    <h1>SOS-NYS</h1>
+    <h3>Secular Organizations for Sobriety / "Save OurSelves"</h3>
+  </nav>
 )
-
-Header.propTypes = {
-  siteTitle: PropTypes.string,
-}
-
-Header.defaultProps = {
-  siteTitle: ``,
-}
 
 export default Header

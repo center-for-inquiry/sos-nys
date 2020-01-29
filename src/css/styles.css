@@ -1,0 +1,66 @@
+body, .navbar{
+    background-color: #EAEAEA;
+}
+
+p, h1, h2, h3, h4, h5, h6, blockquote{
+    max-width: 700px;
+}
+
+#sos-logo{
+    max-width: 100px;
+}
+
+h5.blue-title{
+    max-width: 100% !important;
+}
+
+.navbar, footer {
+    padding: 25px;
+}
+
+.container main{
+    background-color: white;
+    padding: 0px 25px;
+}
+
+@media screen and (max-width: 576px){
+    .container{
+       padding: 0;
+    }
+}
+
+blockquote{
+    padding: 25px 50px;
+    background-color: #deeaee;
+}
+
+hr {
+    border: 0;
+    clear: both;
+    display:block;
+    width: 96%;               
+    background-color: #EAEAEA;
+    height: 1px;
+}
+
+#meetings-row .col-12.col-sm-6:first-child, #contact-row .col-12.col-sm-6:first-child{
+    border-right: 1px solid #EAEAEA;
+}
+
+.blue-background{
+    background-color: #deeaee;
+    padding: 10px;
+    width: 100%;
+    text-align: center; 
+}
+
+.meet-address{
+    font-size: .85em;
+    color: #666;
+    text-decoration: underline;
+}
+
+.meet-address:hover{
+    text-decoration: underline;
+    color: #666;
+}

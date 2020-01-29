@@ -1,8 +1,8 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
+    title: `Secular Organizations for Sobriety`,
+    description: `Save OurSelves-New York is a non-profit network of alternative recovery groups in New York State, which follow the guidelines and principles of SOS (Save OurSelves) International.`,
+    author: `Alex Nicaise`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -18,13 +18,24 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `gatsby-starter-default`,
-        short_name: `starter`,
+        name: `sos-nys-homepage`,
+        short_name: `sos-nys`,
         start_url: `/`,
-        background_color: `#663399`,
-        theme_color: `#663399`,
+        background_color: `#EAEAEA`,
+        theme_color: `#EAEAEA`,
         display: `minimal-ui`,
-        icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
+        icon: `src/images/sos-favicon.png`, // This path is relative to the root of the site.
+      },
+    },
+    {
+    resolve: `gatsby-source-graphql`,
+      options: {
+        // This type will contain remote schema Query type
+        typeName: `WPGraphQL`,
+        // This is field under which it's accessible
+        fieldName: `wpgraphql`,
+        // Url to query from
+        url: `https://centerforinquiry.org/sosnys/graphql`,
       },
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality
