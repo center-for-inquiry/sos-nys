@@ -47,6 +47,10 @@ hr {
     border-right: 1px solid #EAEAEA;
 }
 
+#meetings-row .col-12.col-sm-6 h5.blue-background:first-child{
+margin-top: 0px !important;
+}
+
 .blue-background{
     background-color: #deeaee;
     padding: 10px;

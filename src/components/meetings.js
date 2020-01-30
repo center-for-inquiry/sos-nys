@@ -39,21 +39,21 @@ const Meetings = () => {
             <h3 className="mb-4">SOS Meetings in New York State</h3>
             <div className="row" id="meetings-row">
                 <div className="col-12 col-sm-6">
-                    <h5 className="blue-background"><strong>Monday</strong></h5>
+                    <h5 className="blue-background mt-4"><strong>Monday</strong></h5>
                     {getMeetingDay("Monday")}
                     
-                    <h5 className="blue-background"><strong>Tuesday</strong></h5>
+                    <h5 className="blue-background mt-4"><strong>Tuesday</strong></h5>
                     {getMeetingDay("Tuesday")}
                     
-                    <h5 className="blue-background"><strong>Wednesday</strong></h5>
+                    <h5 className="blue-background mt-4"><strong>Wednesday</strong></h5>
                     {getMeetingDay("Wednesday")}
                     
                 </div>
                 <div className="col-12 col-sm-6"> 
-                    <h5 className="blue-background"><strong>Thursday</strong></h5>
+                    <h5 className="blue-background mt-4"><strong>Thursday</strong></h5>
                     {getMeetingDay("Thursday")}
 
-                    <h5 className="blue-background"><strong>Friday</strong></h5>
+                    <h5 className="blue-background mt-4"><strong>Friday</strong></h5>
                     {getMeetingDay("Friday")}
 
                 </div>

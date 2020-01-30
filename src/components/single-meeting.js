@@ -12,9 +12,13 @@ const SingleMeeting = (props) => {
 
     return (
         <>
-            <p className="my-4"><strong dangerouslySetInnerHTML={createCityTimeMarkup()}></strong><br />
-            <a rel="noopener noreferrer" target="_blank" href={props.addressLoc}><span className="meet-address" dangerouslySetInnerHTML={createAddressMarkup()}>
-            </span></a></p>
+            <p className="mt-4 mb-2">
+                <strong dangerouslySetInnerHTML={createCityTimeMarkup()}></strong>
+            </p>
+            
+            <a rel="noopener noreferrer" target="_blank" href={props.addressLoc}>
+                <span className="meet-address" dangerouslySetInnerHTML={createAddressMarkup()}></span>
+            </a>
         </>
     )
 }
