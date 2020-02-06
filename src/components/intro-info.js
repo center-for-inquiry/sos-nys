@@ -9,7 +9,10 @@ const IntroInfo = (props) => {
     }
 
     return (
-        <div dangerouslySetInnerHTML={createMarkup()}></div>
+        <>
+            <div dangerouslySetInnerHTML={createMarkup()}></div>
+            <hr />
+        </>
     )
 }
 

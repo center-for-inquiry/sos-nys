@@ -17,7 +17,7 @@ const usePromoSection = () => {
         }
     `);
 
-    return sectionData.wpgraphql.pages.edges[0].node;
+    return sectionData.wpgraphql.pages;
 }
 
 export default usePromoSection;

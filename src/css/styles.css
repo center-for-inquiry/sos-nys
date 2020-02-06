@@ -64,6 +64,12 @@ margin-top: 0px !important;
     text-decoration: underline;
 }
 
+.meet-address-none{
+    font-size: .85em;
+    color: #666;
+    text-decoration: none;
+}
+
 .meet-address:hover{
     text-decoration: underline;
     color: #666;

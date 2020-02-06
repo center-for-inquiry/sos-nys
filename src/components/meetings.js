@@ -18,20 +18,38 @@ const Meetings = () => {
         }
 
         function getMeetingDay(day){
-            return(
-                meetList[day].edges.map(edge => {
-                    let nd = edge.node;
+            if (meetList[day].edges.length < 1){
+                return null;
+            } else {
+               return(
+                    meetList[day].edges.map(edge => {
+                        let nd = edge.node;
 
-                    return(
-                        <SingleMeeting
-                        key={nd.postId} 
-                        city={nd.title} 
-                        time={`${nd.meetings.startTime} - ${nd.meetings.endTime}`} 
-                        addressName={nd.meetings.location} 
-                        addressLoc={nd.meetings.mapLink} />
-                    );
-                })
-            );
+                        return(
+                            <SingleMeeting
+                            key={nd.postId} 
+                            city={nd.title} 
+                            time={`${nd.meetings.startTime} - ${nd.meetings.endTime}`} 
+                            addressName={nd.meetings.location} 
+                            addressLoc={nd.meetings.mapLink} />
+                        );
+                    })
+                ); 
+            }
+        }
+
+        function getMeetingHeader(day){
+            if (meetList[day].edges.length < 1){
+                return null;
+            } else {
+                return (
+                    <h5 className="blue-background mt-4">
+                        <strong>
+                            {meetList[day].edges[0].node.categories.edges[0].node.name}
+                        </strong>
+                    </h5>
+                );
+            }
         }
 
         return (
@@ -39,21 +57,23 @@ const Meetings = () => {
             <h3 className="mb-4">SOS Meetings in New York State</h3>
             <div className="row" id="meetings-row">
                 <div className="col-12 col-sm-6">
-                    <h5 className="blue-background mt-4"><strong>Monday</strong></h5>
+                
+                    {getMeetingHeader("Monday")}
                     {getMeetingDay("Monday")}
-                    
-                    <h5 className="blue-background mt-4"><strong>Tuesday</strong></h5>
+
+                    {getMeetingHeader("Tuesday")}
                     {getMeetingDay("Tuesday")}
-                    
-                    <h5 className="blue-background mt-4"><strong>Wednesday</strong></h5>
+
+                    {getMeetingHeader("Wednesday")}
                     {getMeetingDay("Wednesday")}
-                    
+
                 </div>
                 <div className="col-12 col-sm-6"> 
-                    <h5 className="blue-background mt-4"><strong>Thursday</strong></h5>
+                    
+                    {getMeetingHeader("Thursday")}
                     {getMeetingDay("Thursday")}
 
-                    <h5 className="blue-background mt-4"><strong>Friday</strong></h5>
+                    {getMeetingHeader("Friday")}
                     {getMeetingDay("Friday")}
 
                 </div>
