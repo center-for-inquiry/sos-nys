@@ -5,7 +5,7 @@ const useInfoSection = () => {
     const sectionData = useStaticQuery(graphql`
         {
             wpgraphql {
-                pages(where: {id: 4}) {
+                pages(where: {id: 4, status: PUBLISH}) {
                     edges {
                     node {
                         title

@@ -6,7 +6,7 @@ export const useWednesdayMeetings = () => {
     const meetingData = useStaticQuery(graphql`
         {
             wpgraphql {
-            posts(where: {categoryName: "Wednesday"}) {
+            posts(where: {categoryName: "Wednesday", status: PUBLISH, orderby: {field: TITLE, order: ASC}}) {
                 edges {
                     node {
                       title
