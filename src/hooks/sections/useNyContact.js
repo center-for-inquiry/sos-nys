@@ -5,7 +5,7 @@ const useNyContact = () => {
     const sectionData = useStaticQuery(graphql`
         {
             wpgraphql {
-                pages(where: {id: 38}) {
+                pages(where: {id: 38, status: PUBLISH}) {
                     edges {
                     node {
                         title

@@ -5,7 +5,7 @@ const usePromoSection = () => {
     const sectionData = useStaticQuery(graphql`
         {
             wpgraphql {
-                pages(where: {id: 57}) {
+                pages(where: {id: 57, status: PUBLISH}) {
                     edges {
                     node {
                         title
