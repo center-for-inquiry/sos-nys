@@ -19,6 +19,13 @@ export const useFridayMeetings = () => {
                         zipCode
                       }
                       postId
+                      categories {
+                        edges {
+                          node {
+                            name
+                          }
+                        }
+                      }
                     }
                   }
                 }

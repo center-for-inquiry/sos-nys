@@ -2,15 +2,23 @@ import React from "react";
 import usePromoSection from "../hooks/sections/usePromoSection";
 
 const Insert = () => {
-    const content = usePromoSection().content;
-    
-    function createMarkup(){
-        return {__html: content};
+    const query = usePromoSection();
+    if (query.edges.length > 0){
+        function createMarkup(){
+            return {__html: query.content};
+        }
+        
+        return (
+            <>
+                <div dangerouslySetInnerHTML={createMarkup()}></div>
+                <hr />
+            </>
+        );
+    } else {
+        return null;
     }
     
-    return (
-        <div dangerouslySetInnerHTML={createMarkup()}></div>
-    );
+    
 }
 
 export default Insert;
