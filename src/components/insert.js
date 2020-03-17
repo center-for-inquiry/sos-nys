@@ -5,7 +5,7 @@ const Insert = () => {
     const query = usePromoSection();
     if (query.edges.length > 0){
         function createMarkup(){
-            return {__html: query.content};
+            return {__html: query.edges[0].node.content};
         }
         
         return (
